@@ -15,6 +15,14 @@ public class UserDataRepository extends Observable {
         getNewDataFromRemote();
     }
 
+    // Returns a single instance of this class, creating it if necessary.
+    public static UserDataRepository getInstance() {
+        if(INSTANCE == null) {
+            INSTANCE = new UserDataRepository();
+        }
+        return INSTANCE;
+    }
+
 
     // Simulate network
     private void getNewDataFromRemote() {
