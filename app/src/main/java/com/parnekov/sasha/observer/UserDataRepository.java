@@ -32,7 +32,7 @@ public class UserDataRepository extends Observable {
             public void run() {
                 setUserData("Parniekov Sasha", 28);
             }
-        }, 10000);
+        }, 3000);
     }
 
     public void setUserData(String fullName, int age) {
